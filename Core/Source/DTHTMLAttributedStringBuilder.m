@@ -373,7 +373,8 @@
 	
 	void (^blockquoteBlock)(void) = ^
 	{
-		_currentTag.paragraphStyle.headIndent += (CGFloat)25.0 * _textScale;
+		_currentTag.paragraphStyle.headIndent += (CGFloat)35.0 * _textScale;
+		_currentTag.paragraphStyle.tailIndent = -_currentTag.paragraphStyle.headIndent;
 		_currentTag.paragraphStyle.firstLineHeadIndent = _currentTag.paragraphStyle.headIndent;
 		_currentTag.paragraphStyle.paragraphSpacing = _defaultFontDescriptor.pointSize;
 	};
