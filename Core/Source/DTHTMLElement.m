@@ -1276,6 +1276,7 @@ NSDictionary *_classesForNames = nil;
 		{
 			_listIndent = _padding.left;
 			_padding.left = 0;
+			_padding.top = 10;
 		}
 		
 		// if we still have padding we need a block
@@ -1290,7 +1291,9 @@ NSDictionary *_classesForNames = nil;
 		// we only care for margins of block level elements
 		if (hasMargins)
 		{
-			self.paragraphStyle.paragraphSpacing = _margins.bottom;
+			// split margins on top and on the bottom
+			self.paragraphStyle.paragraphSpacingBefore = _margins.bottom/2;
+			self.paragraphStyle.paragraphSpacing = _margins.bottom/2;
 			
 			// we increase the inherited values for the time being
 			self.paragraphStyle.headIndent += _margins.left;
