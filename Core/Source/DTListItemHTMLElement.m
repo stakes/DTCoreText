@@ -112,7 +112,7 @@
 	
 	// modify paragraph style
 	paragraphStyle.firstLineHeadIndent = self.paragraphStyle.headIndent - _margins.left - _padding.left;;  // first line has prefix and starts at list indent;
-	paragraphStyle.defaultTabInterval = 100;
+	paragraphStyle.defaultTabInterval = 0;
 	
 	// resets tabs
 	paragraphStyle.tabStops = nil;
